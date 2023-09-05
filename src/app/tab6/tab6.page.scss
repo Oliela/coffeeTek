@@ -1,0 +1,18 @@
+.section2{
+    display: flex;
+}
+
+.btn-card{
+    --background:#B9723C;
+    color: #fff;
+    --background-focused: #000;
+    --background-activated:#000;
+    --background-hover:#000;
+    margin: 20px;
+}
+
+ion-card{
+    margin: 0;
+    box-shadow: none;
+}
+

@@ -1,0 +1,47 @@
+
+.section-coffee{
+    display: flex;
+    align-items: center;
+}
+
+.coffee-img{
+    width: 70%;
+}
+
+ion-card-title{
+    text-align: center;
+    color: #B9723C;
+}
+
+.btn-register{
+    --background:#B9723C;
+    color: #fff;
+    --background-focused: #000;
+    --background-activated:#000;
+    --background-hover:#000;
+}
+.btn-login{
+    margin-top: 10px;
+    --background: transparent;
+    border:1px solid #B9723C;
+    border-radius: 5rem;
+    color: #B9723C;
+    --background-focused: #000;
+    --background-activated:#000;
+    --background-hover:#000;
+}
+
+.btns{
+    color: #B9723C;
+}
+
+
+ion-item:hover{
+    color: #B9723C;
+    --highlight-height: 1px;
+    --highlight-color-focused: #B9723C; 
+   
+}
+ion-card{
+    box-shadow: none;
+}

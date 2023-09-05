@@ -1,0 +1,33 @@
+ion-card-title{
+    text-align: center;
+    color: #B9723C;
+}
+
+.btn{
+    --background:#B9723C;
+    color: #fff;
+    --background-focused: #000;
+    --background-activated:#000;
+    --background-hover:#000;
+}
+
+
+.btns{
+    color: #B9723C;
+}
+
+ion-item{
+    margin-top: 20px; 
+  
+}
+
+ion-item:hover{
+    color: #B9723C;
+    --highlight-height: 1px;
+    --highlight-color-focused: #B9723C; 
+   
+}
+ion-card{
+    margin-top: 5%;
+    box-shadow: none;
+}

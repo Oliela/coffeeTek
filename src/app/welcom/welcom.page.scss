@@ -1,0 +1,36 @@
+ion-card-title{
+    text-align: center;
+    color: #B9723C;
+}
+.register-button{
+    --background:#B9723C;
+    color: #fff;
+    --background-focused: #000;
+    --background-activated:#000;
+    --background-hover:#000;
+      
+}
+
+
+.login-button{
+    --background:transparent;
+    color: #B9723C;
+    border:1px solid #B9723C;
+    border-radius: 5rem;
+    
+}
+
+.btns{
+    margin-top: 20px;
+    text-align: center;
+}
+
+ion-button{
+    width: 7rem;
+    font-weight: bold;
+}
+
+ion-card{
+    --ion-background-color: transparent;
+    box-shadow: none;
+}

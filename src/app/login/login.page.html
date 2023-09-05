@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+    <ion-button fill="clear" color="dark" slot="start" (click)="goBack()"> <ion-icon name="arrow-back"></ion-icon> </ion-button>
+   
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-card class="ion-no-margin">
+    <ion-card-header>
+      <ion-card-title>Welcome back!</ion-card-title>
+
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <form [formGroup]="loginForm" action="">
+        <ion-item class="item-has-focus ion-touched">
+          <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" formControlName="email"   clearInput required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-input type="password" fill="solid" label="Password" labelPlacement="floating" formControlName="password"clearInput required></ion-input>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-button class="btns" fill="clear" slot="end"> Forget password?</ion-button>
+        </ion-item>
+  
+        <ion-button class="btn" shape="round" fill="solid" expand="block" routerLink="/home" (click)="login()"> Login</ion-button>
+      </form>
+      
+
+      <ion-item lines="none">
+        Doesn't have an account?
+        <ion-button class="btns" fill="clear" slot="end" 
+         (click)="goto('/register')">Register </ion-button>
+      </ion-item>
+      <!-- <ion-item href="https://www.ionicframework.com">
+        Register
+      </ion-item> -->
+
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
