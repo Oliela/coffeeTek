@@ -17,7 +17,7 @@
 
     <ion-card-content>
 
-      <form [formGroup]="loginForm" action="">
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
         <ion-item class="item-has-focus ion-touched">
           <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" formControlName="email"   clearInput required></ion-input>
         </ion-item>
@@ -30,7 +30,7 @@
           <ion-button class="btns" fill="clear" slot="end"> Forget password?</ion-button>
         </ion-item>
   
-        <ion-button class="btn" shape="round" fill="solid" expand="block" routerLink="/home" (click)="login()"> Login</ion-button>
+        <ion-button class="btn" type="submit" shape="round" fill="solid" expand="block">Login</ion-button>
       </form>
       
 
