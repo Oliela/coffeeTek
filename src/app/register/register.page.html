@@ -17,30 +17,34 @@
     </ion-card-header>
 
     <ion-card-content>
-      <ion-item class="item-has-focus ion-touched">
-        <ion-input type="text" fill="solid" label="Nom & prenom" labelPlacement="floating" ></ion-input>
-      </ion-item>
+
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+        <ion-item class="item-has-focus ion-touched">
+          <ion-input type="text" fill="solid" label="Nom & prenom" formControlName="name"  labelPlacement="floating" ></ion-input>
+        </ion-item>
+    
+        <ion-item  class="item-has-focus ion-touched">
+          <ion-input type="email" fill="solid" formControlName="email"  label="Email" labelPlacement="floating" ></ion-input>
+        </ion-item>
+       
+        <ion-item>
+          <ion-input type="password" fill="solid" formControlName="password"  label="Password" labelPlacement="floating"></ion-input>
+        </ion-item>
+    
+        <ion-item lines="none">
+          <ion-button class="btns" fill="clear" slot="end"> Forget password?</ion-button>
+        </ion-item>
   
-      <ion-item  class="item-has-focus ion-touched">
-        <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" ></ion-input>
-      </ion-item>
-     
-      <ion-item>
-        <ion-input type="password" fill="solid" label="Password" labelPlacement="floating"></ion-input>
-      </ion-item>
+        <ion-button class="btn-register"  type="submit" shape="round" fill="solid" expand="block" > Register </ion-button>
   
-      <ion-item lines="none">
-        <ion-button class="btns" fill="clear" slot="end"> Forget password?</ion-button>
-      </ion-item>
+      </form>
 
-      <ion-button class="btn-register" shape="round" fill="solid" expand="block" routerLink="/tabs/tab5"> Register </ion-button>
-
-      <ion-button class="btn-login" shape="round"  expand="block" routerLink="/login"> login</ion-button>
-
+      <ion-button class="btn-login"  shape="round"  expand="block" routerLink="/login"> login</ion-button>
+      
       <!-- <ion-item href="https://www.ionicframework.com">
         Register
       </ion-item> -->
-
 
     </ion-card-content>
   </ion-card>

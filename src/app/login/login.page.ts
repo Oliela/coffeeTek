@@ -47,11 +47,12 @@ export class LoginPage implements OnInit {
     // recuperation des données du formulaires
     let formdata: any = this.loginForm.value;
     //verification des données dans le localstorage
-    if (localStorage.getItem('dataUser')) {
-      let datauser: any = localStorage.getItem('dataUser');
+    if (localStorage.getItem('dataRegister')) {
+      let datauser: any = localStorage.getItem('dataRegister');
       datauser = JSON.parse(datauser);
       // comparaison des identifiants
       if (formdata.email == datauser.email && formdata.password == datauser.password) {
+        this.saveData('dataUser',formdata);
         this.router.navigate(['/home']);
       }
       else {
