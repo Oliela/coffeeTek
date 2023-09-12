@@ -16,14 +16,31 @@
           <!-- <ion-input type="number" inputMode="numeric" pattern="[0-9]*" ></ion-input> -->
         </ion-item>
         <ion-item class="section2">
-          <ion-label>Size</ion-label>
-          <ion-icon name="pint-outline"></ion-icon>
-          <ion-icon name="pint-outline"></ion-icon>
-          <ion-icon name="pint-outline"></ion-icon>
-          
+          <ion-label>Size <ion-icon name="pint-outline"></ion-icon></ion-label>
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Size" interface="popover" placeholder="Select Size">
+                <ion-select-option value="Small">Small</ion-select-option>
+                <ion-select-option value="Medium">Medium</ion-select-option>
+                <ion-select-option value="Large">Large</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+                   
         </ion-item>
         <ion-item>
-          <ion-label>Sugar</ion-label>
+          <ion-label>Sugar <ion-icon name="pint-outline"></ion-icon></ion-label>
+          <ion-segment value="buttons" class="segment">
+            <ion-segment-button value="default">
+              <ion-label>D</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="segment">
+              <ion-label>S</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="buttons">
+              <ion-label>B</ion-label>
+            </ion-segment-button>
+          </ion-segment>
 
         </ion-item>
         <ion-item>
