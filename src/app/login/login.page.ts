@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
   saveData(key: string, value: any) {
     localStorage.setItem(key, value);
   }
-
+ 
   login() {
     // recuperation des données du formulaires
     let formdata: any = this.loginForm.value;
@@ -52,6 +52,7 @@ export class LoginPage implements OnInit {
       datauser = JSON.parse(datauser);
       // comparaison des identifiants
       if (formdata.email == datauser.email && formdata.password == datauser.password) {
+        formdata = JSON.stringify(formdata);
         this.saveData('dataUser',formdata);
         this.router.navigate(['/home']);
       }
