@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 
 @Component({
@@ -16,11 +15,9 @@ export class Tab1Page {
 
   constructor(
     private navCtrl: NavController,
-    private router: Router,
   ) {}
 
   ngOnInit(): void {
-
   }
 
   goto(url: any){
@@ -33,7 +30,7 @@ export class Tab1Page {
   }
 
   getdata(){
-    var dataUser= JSON.parse(this.getData("dataUser"));
+    var dataUser= JSON.parse(this.getData("session"));
 
     this.dataUser = dataUser;
    
@@ -42,34 +39,17 @@ export class Tab1Page {
 
   autentificate(){
 
-    // this.getdata();
+    this.getdata();
 
-    // if(this.dataUser?.email){
+    if(this.dataUser?.email){
       
-    //   this.goto('/home');
-    //   console.log( 'session ouverte '); 
-    // }
-    // else{
-    //   this.goto('/welcom');
-    //   console.log( 'aucune session ouverte ');
-    // }
-
-  
-     //Récupérer des données dans le localstorage
-     if (localStorage.getItem('dataUser')) {
-       let datauser: any = localStorage.getItem('dataUser');
-       datauser = JSON.parse(datauser);
-       // comparaison des identifiants
-       if (datauser.email && datauser.password) {
-         this.router.navigate(['/home']);
-       }
-       else {
-        this.router.navigate(['/welcom']);
-       }
-     }
-     else {
-      this.router.navigate(['/welcom']);
-     }
+      this.goto('/home');
+      console.log( 'session ouverte '); 
+    }
+    else{
+      this.goto('/welcom');
+      console.log( 'aucune session ouverte ');
+    }
   }
 
 

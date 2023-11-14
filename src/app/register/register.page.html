@@ -8,8 +8,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content  fullscreen="true">
-  <ion-card class="ion-no-margin screen">
+<ion-content >
+  <ion-card class="ion-no-margin">
     <ion-card-header class="section-coffee">
       
       <img src="../../assets/images/img6.png" alt="coffee" class="coffee-img">
@@ -17,35 +17,34 @@
     </ion-card-header>
 
     <ion-card-content>
-
       <form [formGroup]="registerForm" (ngSubmit)="register()">
-
         <ion-item class="item-has-focus ion-touched">
-          <ion-input type="text" fill="solid" label="Nom & prenom" formControlName="name"  labelPlacement="floating" ></ion-input>
+          <ion-input type="text" fill="solid" label="Nom & prenom" labelPlacement="floating" formControlName="name"></ion-input>
         </ion-item>
+        <span style="color: red;" *ngIf="name && name.invalid && name.touched"> Ce champ de saisie n'est pas valide! </span>
     
         <ion-item  class="item-has-focus ion-touched">
-          <ion-input type="email" fill="solid" formControlName="email"  label="Email" labelPlacement="floating" ></ion-input>
+          <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" formControlName="email"></ion-input>
         </ion-item>
+        <span style="color: red;" *ngIf="email && email.invalid && email.touched"> Ce champ de saisie n'est pas valide! </span>
        
         <ion-item>
-          <ion-input type="password" fill="solid" formControlName="password"  label="Password" labelPlacement="floating"></ion-input>
+          <ion-input type="password" fill="solid" label="Password" labelPlacement="floating" formControlName="password" ></ion-input>
         </ion-item>
+        <span style="color: red;" *ngIf="password && password.invalid && password.touched"> Mot de passe invalide! </span>
     
         <ion-item lines="none">
           <ion-button class="btns" fill="clear" slot="end"> Forget password?</ion-button>
         </ion-item>
   
-        <ion-button class="btn-register"  type="submit" shape="round" fill="solid" expand="block" > Register </ion-button>
+        <ion-button [disabled]="registerForm.invalid" class="btn-register" shape="round" fill="solid" expand="block" type="submit"> Register </ion-button>
   
+        <ion-button class="btn-login" shape="round"  expand="block" routerLink="/login"> login</ion-button>
+  
+        <!-- <ion-item href="https://www.ionicframework.com">
+          Register
+        </ion-item> -->
       </form>
-
-      <ion-button class="btn-login"  shape="round"  expand="block" routerLink="/login"> login</ion-button>
-      
-      <!-- <ion-item href="https://www.ionicframework.com">
-        Register
-      </ion-item> -->
-
     </ion-card-content>
   </ion-card>
 </ion-content>

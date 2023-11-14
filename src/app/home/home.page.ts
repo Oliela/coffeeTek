@@ -38,7 +38,7 @@ export class HomePage implements OnInit {
 
 
   removeData(){
-    localStorage.removeItem('dataUser');
+    localStorage.removeItem('session');
     this.goto('/tabs/tab1');
   }
 

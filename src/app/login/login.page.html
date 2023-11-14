@@ -21,16 +21,18 @@
         <ion-item class="item-has-focus ion-touched">
           <ion-input type="email" fill="solid" label="Email" labelPlacement="floating" formControlName="email"   clearInput required></ion-input>
         </ion-item>
-    
+        <span style="color: red;" *ngIf="email && email.invalid && email.touched"> Ce champ de saisie n'est pas valide! </span>
         <ion-item>
           <ion-input type="password" fill="solid" label="Password" labelPlacement="floating" formControlName="password"clearInput required></ion-input>
         </ion-item>
+        <span style="color: red;" *ngIf="password && password.invalid && password.touched"> Mot de passe invalide! </span>
+
     
         <ion-item lines="none">
           <ion-button class="btns" fill="clear" slot="end"> Forget password?</ion-button>
         </ion-item>
   
-        <ion-button class="btn" type="submit" shape="round" fill="solid" expand="block">Login</ion-button>
+        <ion-button [disabled]="loginForm.invalid" class="btn" type="submit" shape="round" fill="solid" expand="block">Login</ion-button>
       </form>
       
 
